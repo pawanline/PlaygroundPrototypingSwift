@@ -1,11 +1,13 @@
 
 import UIKit
 import XCPlayground
+import PlaygroundSupport
 
 let containerView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 375.0, height: 667.0))
 
-XCPShowView(identifier: "Container View", view: containerView)
+//XCPShowView(identifier: "Container View", view: containerView)
 
+PlaygroundPage.current.liveView = containerView
 let circle = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 50.0, height: 50.0))
 circle.center = containerView.center
 circle.layer.cornerRadius = 25.0
@@ -27,7 +29,7 @@ UIView.animate(withDuration: 2.0, animations: { () -> Void in
     let endingColor = UIColor(red: (255.0/255.0), green: (61.0/255.0), blue: (24.0/255.0), alpha: 1.0)
     circle.backgroundColor = endingColor
     
-    let scaleTransform = CGAffineTransform(scaleX: 3.0, y: 3.0)
+    _ = CGAffineTransform(scaleX: 3.0, y: 3.0)
     
     let translation = CGAffineTransform(translationX: 0, y: 100)
     
